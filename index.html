@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page - ZOU CHENGQI (Kay)</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1; 
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #3498db; 
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #bdc3c7;
+        }
+
+        /* Navigation menu */
+        nav {
+            background-color: #34495e; 
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+            border-radius: 4px;
+        }
+
+        /* Section styles */
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* About Me styles */
+        #about p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* CV styles */
+        #cv ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #cv ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        #cv ul li::before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        #cv h3 {
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        #cv p {
+            margin: 0;
+            color: #666;
+        }
+
+        .cv-item {
+            margin-bottom: 20px;
+        }
+
+        /* Link button styles */
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .responsive-img {
+            max-width: 100%; 
+            height: auto;    
+            display: block;  
+            margin: 20px auto; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ZOU CHENGQI (Kay)</h1>
+        <p>A Neuroengineering Explorer and a BCI Pioneer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#cv">My CV</a>
+        <a href="#research_philosophy">My Philosophy of Research</a>
+        <a href="#research_interest">My Research Interest</a>
+        <a href="literature_ideas.html">Literature & Ideas</a> <!-- Link to sub-page -->
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is CHENGQI ZOU. Please feel free to call me Kay. I'm a final year undergraduate student major in Biomedical Engineering at CUHK. I am passionate about AI implementation in neural decoding, neuroengineering, and transformer-based BCI. I'm dedicated to empowering people with disabilities to return to normal life through neural signal decoding and BCI technology development. I enjoy engaging myself in new things, exploring different fields, and sharing my insights about neuroengineering with you.</p>
+            <p>Beyond neuroengineering and BCI, I also have a keen interest in materials development and art. I believe interdisciplinary thinking can lead to broader perspectives and deeper understanding.</p>
+            <p>Outside of research and academics, I like musicals, playing guitar and saxophone. In my opinion, playing and enjoying music is similar to doing research, for they both organize different basic units into a beautiful and harmonious expression.</p>
+        </section>
+
+        <section id="cv">
+            <h2>My Curriculum Vitae (CV)</h2>
+
+         
+            <p style="text-align: center;">
+                <a href="ZCQ_CV.pdf" class="button" target="_blank" rel="noopener noreferrer">Download Full CV (PDF)</a>
+              
+            </p>
+        </section>
+
+        <section id="research_philosophy">
+            <h2>My Philosophy of Research</h2>
+            <p>Illustration of My Research Philosophy: Exploring a 'Black box': </p>
+            <img src="research_philosophy.jpg" class="responsive-img">
+
+        </section>
+
+        <section id="research_interest">
+            <h2>My Research Interest</h2>
+            <ul>
+                <li>Brain-Computer Interfaces (BCI)</li>
+                <li>Neural Signal Processing and Decoding</li>
+                <li>Machine Learning and Interpretable Deep Learning Implementation in Neuroengineering</li>
+                <li>Transformer Models for Neural Data</li>
+            </ul>
+
+        <section id="literature-link">
+            <h2>Explore My Thoughts & Literature Readings</h2>
+            <p>During my research, I love to read new and interesting papers to get inspirations for neuroengineering research. Here I decument some literatures I've read and I'm glad to share my thoughts with you.</p>
+            <p style="text-align: center;">
+                <a href="literature_ideas.html" class="button">Go to Literature & Ideas</a>
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ZOU CHENGQI Kay. All rights reserved.</p>
+        <p>Contact: <a href="mailto:your.email@example.com">1155191391@link.cuhk.edu.hk</a>  <p>+862-6203-3017</p>  <a href="https://github.com/CHENGQIZOU" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html>
