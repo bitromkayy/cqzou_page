@@ -120,7 +120,7 @@
     <div class="container">
         <section id="literature">
             <h2>My Literature Readings and Insights</h2>
-            <p><strong> Living Document - Actively Updated</strong> [Last Snapshot: 2025/11/30]</p>
+            <p><strong> Living Document - Actively Updated</strong> [Last Snapshot: 2025/12/5]</p>
             <p>Neuroengineering is a highly interdisciplinary field that encompasses neuroscience, material science, imaging system design, machine learning, interpretable deep learning, and signal processing with feature extraction. To gain a deeper understanding of what I'm researching, I like reading papers that propose novel and interesting research perspectives and system architecture design for inspirations. Here I document some literature I've read and write down my thoughts during the reviewing. They are organized according to their research fields. </p>
 
 
@@ -219,9 +219,17 @@
                     <br><small><strong>20. </strong>somatotopic connectivity explains BOLD signal variance during video watching -> possibility: visual cortex body-part tuning may be structured as orderly, somatotopic map-like arrangements on the cortical surface -> methods: project connective-field estimated somatotopic tuning onto this region -> suggest a hybrid organization: discrete field-based topography in core somatosensory regions and integrative cross-field tuning in higher-order partietal and visual areas</small>
                     <br><small><strong>21. </strong>problem: what is the principle that vision and somatosensation might br configured to connect to and recruit one another in the dorsolateral visual cortex -> much of the visual system is retinotopically organized -> alignment of the somatotopic and retinotopic reference frames -> hypothesis 1: reflect ecological coincidences between visual field and bodily positions supporting computation of enviornmental affordances -> topographic alignment may occur at a categorical level</small>
                     <br><small><strong>22. </strong>topographic alignment may occur at a categorical level -> somatotopic structure predicts visual body-part selectivity -> hypothesis 2: able to predict voxel-level visual selectivity to body parts from our somatotopic map -> use a pose-estimatiion algorithm -> the somatotopic map predict visual body part preference from the superior portion of FBA into the ventral portion of the EBA -> suggest at least two complementary multisenory alignment modes in visual cortex: visuospatial dorsally and semantic ventrally</small>
-                    <br><small><strong>(Actively Studing and Updating)</strong></small>
-                    <br><small><strong>My Insight: 1. </strong>All the experiment designs in this work follow this general closed-loop logic chain, which I will learn to follow in my future research: (i) start from the first principle of our sensory system: topographic organization; (ii) according to previous findings, formulate hypotheses based on the topographic organization to try to explain thes findings; (iii) build connectivity maps and/or connection field to apply the first principle to test our hypothesis and predictions; (iv) implement verified models, algorithm, and statistical methods to analyse the hypothesis-related data; (v) according to quantitative analysis of statistics and model predictions, make a conclusion; (vi) extract new findings for next hypothesis</small>
-                    <br><small><strong>(Actively Studing and Updating)</strong></small>
+                    <br><small><strong>23. </strong>Somatotopic tuning: visual field locations -> more dorsally; visual body part -> more vertrally</small>
+                    <br><small><strong>24. </strong>interpreting the findings requires acknowledging fundamental disjuctures between vision and somatosensation</small>、
+                    <br><small><strong>25. </strong>main methodology in their study: alignment of visual and somatosensory maps -> a fundamental principle of brain organization</small>
+                    <br><small><strong>26. </strong>preferences for positions on the visual field can be estimated by referencing the estimated connective-field V1 positions against the retinotopic map of V1</small>
+                    <br><small><strong>27. </strong>How to design matrix and built connective field: Laplace-Beltrami operator (LBOEs) -> yield a finite family of real-valued functions that are intrinsic to the surface space, orthogonal and ordered according to spatial scale -> approximate any arbitrary spatial pattern on the surface (a connective-field) through a linear combination of LBOEs</small>
+                    <br><small><strong>28. </strong>How to estimate connective-field: the dot production of its estimated b*i and the corresponding spatial profiles si reveals a spatial map of the imporatance of each vortex on S1 and V1 in explaining the voxels response -> "connective-field"</small>
+                    <br><small><strong>29. </strong>Alternative model -> test the organizing influence of body part fields -> compare fully connective-field model to 4 alternative connective field models (corresponding to the lower limb, trunk, upper limb and face field) -> comparing delta_R2 and 0</small>
+                    <br><small><strong>My Insight: 1. </strong>All the experiment designs in this work follow this general closed-loop logic chain, which I will learn to follow in my future research: (i) start from the first principle of our sensory system: topographic organization; (ii) according to previous findings, formulate hypothesis based on the topographic organization to try to explain thes findings; (iii) build connectivity maps and/or connection field to apply the first principle to test our hypothesis and predictions; (iv) implement verified models, algorithm, and statistical methods to analyse the hypothesis-related data; (v) according to quantitative analysis of statistics and model predictions, make a conclusion; (vi) extract new findings for next hypothesis</small>
+                    <br><small><strong>My Insight: 2. </strong>In brain signal design, local information and connective information both count! To analysis the connective information, alignment of topographic maps is an effective method</small>
+                    <br><small><strong>My Insight: 3. </strong>Brain modeling is not just fitting the brain signals with an existing ML or DL models. Brain modeling starts from a first principle of our sensory system, formulates rational hypothesis, and design or implement relevant ML/DL model to test the hypothesis. Finally, try to use first principle and physiological knowledge to interprete our finding.</small>
+
 
                     
                     
@@ -234,15 +242,48 @@
                 <li>
                     <strong>“Connectome caricatures remove large-amplitude coactivation patterns in resting-state fMRI to emphasize individual differences” by Htoo Wai Aung et al.:</strong>
                     DOI: <a href="https://doi.org/10.1038/s41593-025-02099-7">10.1038/s41593-025-02099-7</a>
-                    <br><small><strong>(Actively Studing and Updating)</strong></small>
-                    <br><small><strong></strong></small>
-                    
-                    
+                    <br><small><strong>1. </strong>caricaturing: a method for projecting resting-state data onto a subspace orthogonal to a manifold of coactivation patterns estimated from task fMRI data</small>
+                    <br><small><strong>2. </strong>First principle in this study: high-amplitude coactivation -> shared features within population; removing these shared signals (hidden signal) -> intrinsic different architecture of the individual-subject</small>
+                    <br><small><strong>3. </strong>Two theoretical frameworks exsit to emphasize individual differences in functional connectivity: (1) 'Spotlight' approach: blur the irrelevant features while retaining and enriching relevant ones -> Task-induced change in fMRI: consistently modulating the coactivations across individuals; (2) 'caricature' approach: exaggerate "the most prominent features of each individual"</small>
+                    <br><small><strong>4. </strong>resting-state fMRI signal - dominant coactivation patterns = a hidden signal -> characterizing the brain's intrinsic function architecture</small>
+                    <br><small><strong>5. </strong>How to implement caricaturing: project the resting-state fMRI time series away from a manifold of task coactivation patterns estimated from the task-based time series -> (1) construct covariance matrix and calculate eigenvectors; (2) create a projection matrix to project an fMRI time point into a subspace that is orthogonal to the eigenvectors explaining the most variance -> top eigenvectors represent the low-dimensional coactivation patterns that recur accross tasks; (3) multiply this projection matrix by each tima point to create the 'hidden signal' time series; (4) correlate pairs of time series to create caricature connectomes</small>
+                    <br><small><strong>6. </strong>use MCA (minor component analysis) instead of PCA (principle component analysis):(1) PCA: use top components; MCA extract component accounting for the smallest variance; (2) PCA may overlook weak signal; MCA is usrful when desired signal in weak and less prominent patterns in data</small>
+                    <br><small><strong>7. </strong>investigate multivariate reliability -> determine whether changes in connectome similarity had a wider effect on the data</small>
+                    <br><small><strong>8. </strong>Reliability: a function of within- and between-individual similarity -> higher ratio between the two -> higher reliability</small>
+                    <br><small><strong>9. </strong>multivariate reliability: whole-brain-level (improved by caricaturing); univariate reliability: edge-level (decreased with caricaturing)</small>
+                    <br><small><strong>10. </strong>multivariate provides an upper limit for prediction -> caricaturing imporve multivariate reliability -> improve prediction performance</small>
+                    <br><small><strong>11. </strong>multivariate reliability is separable from univariate reliability</small>
+                    <br><small><strong>12. </strong>Limitations: (1) Possibility of data loss: it is unclear how much task-relevant information is removed from the resting-state data; (2) only use linear method to define the manifold; (3) only use correlation to measure distance ->other matrics may yield slightly different results; (4) the observed prediction imporvement is modest and small -> combine with other advancements for further improvements; (5) note whether caricaturing is biased by various demographic factors; (6) as caricaturing uses MCA, caricatured data may contain a higher proportion of unstructured noise than standard connectomes.</small>
+
+
+                    <br><small><strong>My Insight: 1. </strong>Datasets which would be useful in our future research: HCP (Human connectome project), CNP (Consortium for Neuropsychiatrix Phenomics), TRT (the Yale Test-Retest)</small>
+                    <br><small><strong>My Insight: 2. </strong>For prediction related to individual difference, caricaturing can act as an enhancement technique for signal preprocessing</small>
+                    <br><small><strong>My Insight: 3. </strong>The logic chain in the experiment design: (1) start from first principle: high-amplitude coactivation -> shared features within population; removing these shared signals (hidden signal) -> intrinsic different architecture of the individual-subject; (2) build a caricaturing framework to remove dominant coactivation patterns and emphasize hidden signals that characterize the individual difference; (3) use a series of experiments to verify the framework and the advantages of coactivation-removed signal</small>
+                    <br><small><strong>My Insight: 4. </strong>An autoencoder-based DL model could be implemented for the caricaturing process, where the encoder can process the fMRI data into </small>
                 
                     <br><small><strong></strong></small>
                 </li>
 
 
+
+                <li>
+                    <strong>“Prediction of neural activity in connectome-constrained recurrent networks” by Manuel Beiran & Ashok Litwin-Kumar:</strong>
+                    DOI: <a href="https://doi.org/10.1038/s41593-025-02080-4">10.1038/s41593-025-02080-4</a>
+                    <br><small><strong>1. </strong>connectome-constrained neural network: 'student' network: trained to reproduce the activity; 'teacher': ground truth -> same synaptic weights but different biophysical parameters -> reflecting uncertainty in neuronal and synaptic properties</small>
+                    <br><small><strong>2. </strong>a major challenge for connectome-constrained models: uncertainty in biophysical parameters that affect neural dynamics</small>
+                    <br><small><strong>3. </strong>Problem: training a connectome-constrained student network to generate the task-related readout of the teacher does not always produce consistent dynamics in the teacher and student -> Reason: multiple combinations of signal-neuron parameters can equivalently solve the same task (The Problem of Degeneracy)</small>
+                    <br><small><strong>4. </strong>Method to break the degeneracy: combine the connectivity constrains with recording of the activity of a subset of neurons -> the minimum number of recording depends on the dimensionality of the network dynamics instead of the total number of neurons</small>
+                    <br><small><strong>5. </strong>'stiff' parameters: strong effect on neural dynamics; 'sloppy' parameters: weak effects</small>
+                    <br><small><strong>6. </strong>Teacher: used as a proxy for a neural system whose connectomes has been mapped and whose output for a neural activity can be recorded</small>
+                    <br><small><strong>7. </strong>Student: trained to generate the same readout as the teacher -> succesfully reproduce the teacher's readout but have error in the neural activity of the student</small>
+                    <br><small><strong>8. </strong>The knowledge of synaptic weights and task output is not always enough to predict the activity of signal neurons in recurrent networks -> problem: a degenerate space of solutions, with different combinations of single-neuron gains and biases, that solve the same task -> proposed solution: instead of recording only task-related readout activity, record the activity of a subset of neurons in the teacher network</small>
+                    <br><small><strong>9. </strong>Two possibilities about the required number of recorded neurons: (1) fixed fraction of the total number of neurons in the network; (2) determined by properties of the network dynamics -> by experiment, determined by dimensionality of the neural dynamics</small>
+                    <br><small><strong>(Actively studying and uploading)</strong></small>
+                    
+                    <br><small><strong>My Insight: 1. </strong>The first principle of this work: Synaptic connectivities can constrain neural dynamics to a low-dimensional representation or manifold, enabling the prediction of global activity from a small subset of recorded neurons</small>
+                
+                    <br><small><strong>My Insight: 2. </strong>For neural signal decoding, because neural signal docoding commonly has many biophysiological and synpatic parameters, we need multiple constrains instead of just output constrains if we can out model learn latent neural activity from the raw neural signals.</small>
+                </li>
 
 
 
@@ -360,6 +401,14 @@
                 </li>
 
 
+                <li>
+                    <strong>“Joint modelling of brain and behaviour dynamics with artificial intelligence” by Mackenzie Weygandt Mathis & Alexander Mathis :</strong>
+                    DOI: <a href="https://doi.org/10.1038/s41583-025-00996-1">10.1038/s41583-025-00996-1</a>
+                    <br><small><strong>(Actively studying and updating)</strong></small>
+                    <br><small><strong></strong></small>
+                    <br><small><strong></strong></small>
+                    <br><small><strong></strong></small>
+                </li>
             </ul>
 
 
